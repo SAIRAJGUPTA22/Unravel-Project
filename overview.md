@@ -84,17 +84,17 @@ When scheduled, the script remains active, executing scraping jobs automatically
 
 ## Handling Article Updates (Optional Enhancement)
 
-Currently, the pipeline **does not update existing articles** — it only inserts new ones and skips duplicates. However, if you want to handle **updates to articles** (for example, if titles, summaries, or other metadata change over time), you can follow this suggested approach:
+Currently, the pipeline **does not update existing articles** — it only inserts new ones and skips duplicates. However, if we want to handle **updates to articles** (for example, if titles, summaries, or other metadata change over time), we can follow this suggested approach:
 
 ### Proposed Process to Handle Article Updates
 
- **Add a New Column to Your Articles Table**
+ **Add a New Column to  Articles Table**
 
    - Create a column, e.g., called `content_hash` or `checksum`, which stores a hash or checksum representing the current state of the article's content (title, summary, author, or any relevant fields).
 
  **During Each Pipeline Run:**
 
-   - For each article fetched, compute the hash/checksum of the *important* fields you want to track for changes (e.g., title + summary + published date).
+   - For each article fetched, compute the hash/checksum of the *important* fields we want to track for changes (e.g., title + summary + published date).
    - Query the database to check if the article already exists:
      - If the article **does not exist**, insert it normally.
      - If the article **exists**, compare the new checksum with the stored one.
