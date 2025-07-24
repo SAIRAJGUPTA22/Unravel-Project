@@ -57,7 +57,7 @@ The scraper retrieves the homepages of both sources and extracts the following d
   - Number of new articles inserted.
   - Details of the latest 5 articles.
 
-7. Scheduling
+## 7. Scheduling
 - The pipeline can be executed manually or scheduled to run hourly.
 - Manual Run:
     python main.py
