@@ -1,6 +1,6 @@
 # Unravel Project
 
-This project is a Python-based news aggregation pipeline that collects, parses, and stores the latest articles from two leading travel industry news sources: **Skift** and **PhocusWire**. Its primary goal is to maintain an up-to-date, deduplicated repository of travel news for streamlined access and analysis.
+This project is a Python based news aggregation pipeline that collects, parses, and stores the latest articles from two leading travel industry news sources: **Skift** and **PhocusWire**. Its primary goal is to maintain an up-to-date, deduplicated repository of travel news for streamlined access and analysis.
 
 ## 1. Data Sources
 
